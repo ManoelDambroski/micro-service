@@ -32,10 +32,8 @@ public class WorkerResoruce {
 	
 	@GetMapping("/{id}")
 	public  ResponseEntity<Worker> findById(@PathVariable Long id){
-		
 		Worker worker = workerRepository.findById(id).get();
 		 
-		
 		return ResponseEntity.ok().body(worker);
 	}
 	
